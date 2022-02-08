@@ -1,0 +1,31 @@
+{
+    "name": "vgplay/news",
+    "description": "news",
+    "type": "library",
+    "require": {
+        "laravel/framework": "^6|^7|^8",
+        "vgplay/laravel-redis-model": "^1",
+        "vgplay/contracts": "^1.1",
+        "ckfinder/ckfinder-laravel-package": "v3.5.2.1"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Vgplay\\News\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "dung199551",
+            "email": "dung199551@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vgplay\\News\\NewsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable"
+}
