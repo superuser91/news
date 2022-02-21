@@ -72,4 +72,9 @@ class Post extends Model implements Cacheable
                 ));
         })->where('status', 'PUBLISHED')->take($take);
     }
+
+    public function isPublished()
+    {
+        return $this->status === 'PUBLISHED';
+    }
 }
