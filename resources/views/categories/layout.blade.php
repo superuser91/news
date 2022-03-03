@@ -58,6 +58,20 @@
     </div>
     @include('ckfinder::setup')
     @stack('scripts')
+    <script>
+      $('form').submit(function(e) {
+        $(this).attr('disabled', true);
+        Swal.fire({
+                title: 'Đang xử lý ...',
+                showConfirmButton: false,
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                onBeforeOpen: () => {
+                    Swal.showLoading()
+                },
+            });
+      })
+    </script>
 </body>
 
 </html>
